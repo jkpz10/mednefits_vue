@@ -1,0 +1,660 @@
+.claim-wrapper {
+	.transaction-wrapper {
+		border-top: 0;
+	}
+}
+
+.view-search-container >div{
+	margin: 50px 0 20px;
+	display: flex;
+
+	>div {
+		width: 50%;
+	}
+
+	.view-toggle-btn h4 {
+		font-weight: 400;
+		font-size: 16px;
+		color: #555;
+		margin-bottom: 10px;
+	}
+
+	.view-toggle-btn  button {
+		background-color: #fff;
+		border: 1px solid #ccc;
+		border-radius: 4px;
+		box-shadow: 0 3px 3px 0 rgba(0,0,0,.14), 0 1px 7px 0 rgba(0,0,0,.12), 0 3px 1px -1px rgba(0,0,0,.2);
+		font-weight: 700;
+		font-size: 13px;
+		padding: 10px 15px;
+		width: 200px;
+		text-align: left;
+	}
+
+	.btn-view-eclaim {
+		position: relative;
+	}
+	.btn-view-eclaim .dropdown-menu {
+		width: 200px;
+		position: absolute;
+    background: #e6e3e3;
+    border: none;
+    border-radius: 0px;
+    box-shadow: 0px 1px 8px #777;
+    margin: 2px 0 0;
+    padding: 5px 0;
+
+
+    >li>a {
+    	display: block;
+	    padding: 3px 20px;
+	    font-weight: 400;
+	    color: #333;
+    }
+
+    >li>a:hover {
+    	background: #529ed4;
+    	color: #fff;
+    }
+	}
+
+	.search-wrapper .input-group {
+		margin: 35px 0 auto auto;
+	}
+}
+
+.total-claim-transaction {
+  display: inline-block;
+  width: 100%;
+	margin: 0 0 10px;
+
+	.total-transaction-container {
+		float: left;
+	}
+	.total-claim-container {
+		float: right;
+
+		>span {
+			margin-left: 15px;
+		}
+	}
+}
+
+.download-btn-container {
+	text-align: right;
+	margin: 0 0 40px;
+
+	button {
+		background-color: #fff;
+		border-radius: 4px;
+		border: 1px solid #aaa;
+		padding: 8px 30px;
+		font-size: 12px;
+		font-weight: 700;
+		height: 38px;
+		margin-left: 10px;
+		letter-spacing: .5px;
+
+		i {
+			font-size: 14px;
+	    margin-left: 5px;	
+		}
+	}
+	button:disabled{
+		opacity: .5;
+		cursor: not-allowed;
+	}
+}
+
+.transaction-table-container {
+	padding: 20px 73px;
+	thead tr th {
+		background-color: #C6E7F7;
+		padding: 10px 10px 5px 10px;
+		border: none;
+		font-size: 12px;
+		font-family: 'Helvetica Neu Bold';
+		vertical-align: middle;
+
+		&:nth-child(1) {
+			width: 10%;
+			padding: 10px 10px 5px 10px;
+		}
+		&:nth-child(2) {
+			width: 18%;
+		}
+		&:nth-child(3) {
+			width: 13%;
+		}
+		&:nth-child(4) {
+			width: 18%;
+			padding-left: 40px;
+		}
+		&:nth-child(5) {
+			width: 15%;
+		}
+		&:nth-child(6) {
+			width: 16%;
+		}
+		&:nth-child(7) {
+			min-width: 145px;
+		}
+	}
+
+	tbody tr td {
+		color: #888;
+    border: none;
+    font-size: 14px;
+    padding: 35px 10px 35px 10px;
+    vertical-align: middle;
+    border-bottom: 1px solid #e9e9e9;
+    position: relative;
+
+    &.claim-type-details {
+    	padding-left: 40px;
+    }
+
+    &:first-child {
+    	padding: 35px 10px 35px 10px;
+    }
+    
+    label {
+    	display: block;
+    	text-align: center;
+    	font-size: 12.8px;
+    }
+
+    .fa-angle-right {
+    	font-size: 30px;
+    	color: #555;
+    	cursor: pointer;
+    }
+
+    .spouse-member {
+    	font-size: 12px;
+    	color: #33CCCD;
+    }
+
+    &:nth-child(8) {
+  		padding: 10px 10px 5px 10px;
+  	}
+  }
+
+  .trans-receipts-wrapper {
+    padding: 0;
+  }
+
+  .in-network-subtr td:first-child {
+  	background: #f2f2f2;
+  	box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+  	padding: 35px 10px 35px 0;
+  }
+
+	.status-text {
+    padding: 6px;
+    width: 80px;
+    color: #FFF;
+    border-radius: 5px;
+
+    &.pending {
+    	background: #909090;
+    }
+    &.rejected {
+    	background: rgba(255,58,62,0.66);
+    }
+    &.approved {
+    	background: #2fa235;
+    }
+  }
+
+  .status-left-wrapper {
+    width: 25%;
+    float: left;
+  }
+
+
+  .reason-wrapper {
+  	text-align: center;
+    display: block;
+    width: 240px;
+    margin: 0px auto;
+
+    input {
+	  	border-radius: 0px;
+	  	border-width: 0px 0px 1px;
+	  }
+
+	  >div {
+	  	width: 100%;
+	  	text-align: center;
+	  	margin: 10px 0 0;
+	  }
+
+	  button {
+	  	border-radius: 5px;
+	  	padding: 6px;
+	  	width: 80px;
+	  	border: 0;
+	  	color: #fff;
+	  }
+
+	  .btn-cancel {
+	  	color: #333;
+	  	border: 1px solid #ddd;
+	  	background: #fff;
+	  	margin: 0 5px 0 0;
+	  }
+
+	  .btn-approve-proceed {
+	  	background: #de6f6f;
+	  	margin: 0 0 0 5px;
+	  }
+
+	  .btn-reject-proceed {
+	  	background: #0086D3;
+	  	margin: 0 0 0 5px;
+	  }
+  }
+
+  .status-box-left {
+  	background: #ccc;
+    padding: 20px 15px 8px 15px;
+    border-radius: 0 8px 8px 0;
+    color: #555;
+    
+
+    .status_text {
+    	font-size: 20px;
+    	margin: 0 0 10px;
+    }
+    .claim-date-text {
+    	font-size: 12px;
+    	margin: 0 0 10px;
+    }
+  }
+
+  .reason-container {
+    margin: 40px 0 0;
+    text-align: left;
+    width: 185px;
+    padding: 0 0 0 30px;
+
+    .label {
+      color: #333;
+      font-size: 13px;
+      margin: 0 0 15px 0;
+    }
+  }
+
+  .transac-details-wrapper {
+  	text-align: center;
+  	width: 41.66666667%;
+  	float: left;
+  }
+
+  .transac-details {
+  	text-align: left;
+  	display: inline-block;
+
+  	>div {
+  		margin: 0 0 10px;
+      font-size: 13px;
+  	}
+
+  	>div label{
+  		display: inline-block;
+  		width: 145px;
+	    text-align: right;
+	    margin-right: 20px;
+	    color: #444;
+  	}
+
+    >div span {
+      color: #999;
+    }
+  }
+
+  .transac-details-btn {
+  	margin: 20px 0 0;
+  	button {
+  		width: 30%;
+  		font-size: 12px;
+  		font-weight: 700;
+  		padding: 8px 0;
+  		color: #fff;
+  		border: 1px solid transparent;
+  		border-radius: 4px;
+  		letter-spacing: .5px;
+  		margin: 0 4px;
+  	}
+  	.btn-approved {
+  		background: #008000e6;
+  	}
+  	.btn-rejected {
+  		background: #ff0000bf; 
+  	}
+    .btn-check-pending {
+      background-color: #0086D3;
+      font-size: 11px;
+    }
+  }
+
+  .download-receipt-container {
+    width: 33.33333333%;
+    float: left;
+
+    .btn-download-receipt {
+    	background: #0086D3;
+	    color: #fff;
+	    padding: 10px;
+	    width: 88%;
+	    border: none;
+	    border-radius: 5px;
+	    display: block;
+	    margin-bottom: 20px;
+	    font-weight: 300;
+	    position: relative;
+	    cursor: pointer;
+
+      &.disabled {
+        /*background: #0086d38a;*/
+        cursor: not-allowed;
+        background: #DFDFDF;
+	    color: #9F9F9F!important;
+      }
+      input{
+  	    position: absolute;
+		    top: 0;
+		    left: 0;
+		    width: 100%;
+		    height: 100%;
+		    opacity: 0;
+		    cursor: pointer;
+      }
+    }
+  }
+
+  .trans-receipts-wrapper {
+		float: left;
+  	text-align: left;
+    // width: 100%;
+    // display: inline-block;
+  }
+  
+	// .trans-receipts-wrapper:hover 
+	.click-box-wrapper:hover .click-box {
+		display: inline-block;
+		opacity: 1;
+    cursor: pointer;
+  }
+
+  .click-box-wrapper  {
+  	position: relative;
+  	display: inline-block;
+
+  	.click-box {
+  		opacity: 0;
+  		position: absolute;
+	    top: 0;
+	    left: 0;
+	    width: 80px;
+	    height: 80px;
+	    text-align: center;
+	    line-height: 83px;
+			background: rgba(0,0,0,.3);
+  	}
+
+  	i {
+  		color: #fff;
+  	}
+
+  	.thumbnail {
+	  	height: 80px;
+	    width: 80px;
+	    border: 1px solid #d9d9d9;
+	    margin: 0 5px 5px 0;
+    }
+  }
+}
+
+// animation transition CSS
+
+/* for chevron animation */
+.fa-angle-down-active {
+	-ms-transform: rotate(90deg); /* IE 9 */
+	-webkit-transform: rotate(90deg); /* Safari 3-8 */
+	transform: rotate(90deg);
+}
+
+/* for subtr transition */
+
+.fade-enter-active, 
+.fade-leave-active {
+	-webkit-transition: all .3s cubic-bezier(0.645, 0.045, 0.355, 1.000); 
+		-moz-transition: all .3s cubic-bezier(0.645, 0.045, 0.355, 1.000); 
+			-o-transition: all .3s cubic-bezier(0.645, 0.045, 0.355, 1.000); 
+				transition: all .3s cubic-bezier(0.645, 0.045, 0.355, 1.000); /* easeInOutCubic */
+
+	-webkit-transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1.000); 
+		-moz-transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1.000); 
+			-o-transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1.000); 
+					transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1.000); /* easeInOutCubic */
+}
+.fade-enter, 
+.fade-leave-to { /* .fade-leave-active below version 2.1.8 */ 
+	/* transform: translate(0, -100%); */
+	opacity: 0;
+}
+
+// Responsive style
+
+@media (max-width: 1300px) {
+	.claim-wrapper {
+		.transaction-wrapper {
+			overflow: auto;
+			padding: 30px 0 25px;
+
+			&::-webkit-scrollbar {
+				height: 3px;
+			}
+		}
+
+		.transaction-table-container {
+			width: 1097px;
+			padding: 20px 15px;
+			margin: 0 auto;
+		}
+	}
+}
+
+@media (max-width: 941px) {
+
+	.claim-wrapper {
+		.btn-spending-type {
+			width: unset;
+
+			&.btn-medical {
+				border-radius: 4px 0 0 4px;
+				border-width: 2px 1px 2px 2px;
+			}
+
+			&.btn-wellness {
+				border-radius: 0 4px 4px 0;
+				border-width: 2px 2px 2px 1px;
+			}
+		}
+
+		.claim-container {
+			padding: 0 20px;
+		}
+	}
+}
+
+@media (max-width: 767px) {
+
+	.claim-wrapper {
+		padding-top: 100px;
+
+		.cost-wrapper {
+			grid-template-columns: 1fr 1fr;
+
+			>div {
+				border-right: unset;
+			}
+		}
+
+		.activity-header-calendar {
+			margin: 30px 0 0;
+		}
+
+		.transaction-table-container {
+			padding: 20px 15px;
+		}
+	}
+}
+
+@media (max-width: 600px) {
+	.claim-wrapper {
+		.cost-wrapper  {
+			grid-template-columns: 1fr;
+			
+			>div {
+			text-align: center;
+			width: 90%;
+			margin: 15px auto;
+			}
+		}
+
+		.download-btn-container {
+			text-align: center;
+		}
+	}
+}
+
+@media (max-width: 575px) {
+	.claim-wrapper {
+		.search-wrapper .input-group {
+			position: unset;
+			width: unset;
+		}
+	}
+}
+
+@media (max-width: 530px){
+	.claim-wrapper {
+
+		.team-benefits-wrapper {
+			margin: 30px 0 0;
+		}
+
+		.activity-header-calendar {
+			display: block;
+		}
+		.date-selection-container {
+			display: block;
+			width: 60%;
+			margin: 15px auto;
+
+			.custom-date-selector {
+				width: 100%;
+				margin: 7.5px 0;
+			}
+
+			span {
+				display: block;
+				text-align: center;
+				width: 100%;
+
+				.fa-arrow-right {
+					-webkit-transform: rotate(90deg);
+					transform: rotate(90deg);
+				}
+			}
+
+			.btn-apply {
+				margin-left: unset;
+				width: 100%;
+				cursor: pointer;
+			}
+
+			.popover-container {
+				width: 100%;
+			}
+		}
+	}
+}
+
+@media (max-width: 460px){
+	.claim-wrapper {
+		.view-search-container > div {
+			margin: 50px auto 20px;
+			display: block;
+			width: 60%;
+			text-align: center;
+			
+			>div {
+				width: 100%;
+				>div {
+					button {
+						width: 100%;
+					}
+				}
+			}
+		}
+
+		.download-btn-container {
+			text-align: center;
+		}
+	} 
+}
+
+@media (max-width: 414px){
+	.claim-wrapper {
+		.claim-container {
+			padding: 0 0;
+		}
+
+		.date-selection-container {
+			width: 100%;
+		}
+
+		.download-btn-container {
+			margin: 0 0 30px;
+
+			button {
+				margin: 5px auto;
+				display: block;
+				width: 100%;
+			}
+		} 
+	}
+
+	.claim-wrapper {
+		.view-search-container > div {
+			width: 100%;
+			text-align: left;
+		}
+	}
+}
+
+@media (max-width: 361px) {
+	.claim-wrapper {
+		.team-benefits-wrapper {
+			.team-benefits-header button {
+				font-size: 10px;
+			}
+		}
+	}  
+}
+
+
+@media (max-width: 350px) {
+	.claim-wrapper {
+		.total-claim-transaction {
+			> div {
+				float: unset;
+				margin: 5px auto;
+			}
+		} 
+	}
+}

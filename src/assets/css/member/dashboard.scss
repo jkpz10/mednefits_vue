@@ -1,0 +1,198 @@
+/*---------- NAVBAR -----------*/
+  .navbar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    height: 90px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 50;
+  }
+  .navbar.white-header{
+    background: #FFF;
+    box-shadow: 0 2px 10px #cac7c7;
+  }
+
+  .navbar .nav-logo{
+    width: 70px;
+    margin-left: 20px;
+  }
+
+  .navbar .nav-logo img{
+    width: 45px;
+  }
+
+  .navbar .nav-items{
+  	flex: 1;
+  	text-align: center;
+  }
+
+  .navbar .nav-items ul{
+  	list-style: none;
+  	margin: 0;
+  	padding-left: 50px;
+  }
+
+  .navbar .nav-items ul li{
+  	display: inline-block;
+  }
+
+  .navbar .nav-items ul li a{
+    color: #555;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 30px 2px 2px 2px;
+    margin: 0 15px;
+    font-size: 15px;
+    letter-spacing: 0.8px;
+  }
+
+  .navbar .nav-items ul li.active a,
+  .navbar .nav-items ul li.router-active a{
+  	border-bottom: 2px solid #009EC8;
+    color: #009EC8;
+  }
+
+  .navbar .need-help-container{
+    width: 170px;
+    position: relative;
+  }
+  .navbar .need-help-container .need-help-text{
+    font-size: 16px;
+    color: #777;
+    font-weight: 700;
+    margin-right: 20px;
+  }
+  .navbar .need-help-container .need-help-drop-container{
+    display: none;
+    text-align: left;
+    position: absolute;
+    top: 35px;
+    right: 85px;
+    width: 310px;
+    color: #FFFFFF;
+    background: #f1eded;
+    height: auto;
+    line-height: 30px;
+    padding: 35px 35px;
+    z-index: 9999;
+    font-weight: 700;
+  }
+  .navbar .need-help-container .need-help-drop-container:after {
+    content: '';
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border-bottom: 10px solid #efefef;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    z-index: 9999;
+  }
+  .navbar .need-help-container .need-help-drop-container p{
+    color: #8a8a8a;
+    font-size: 16px;
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+  .navbar .need-help-container .need-help-drop-container p.title{
+    color: #0392cf;
+    font-size: 22px;
+  }
+  .navbar .need-help-container .need-help-drop-container p.subtitle{
+    color: #494949;
+    font-size: 18px;
+  }
+
+  .navbar .need-help-container > a:hover + .need-help-drop-container{
+    display: block;
+  }
+
+  .navbar .need-help-container img{
+    width: 30px;
+    cursor: pointer;
+  }
+
+  .navbar .need-help-container .logout-drop{
+    padding: 5px 20px;
+    background: #ddd;
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    width: 190px;
+  }
+
+  .navbar .need-help-container .logout-drop ul{
+    float: left;
+    margin: 0;
+    width: 100%;
+  }
+
+  .navbar .need-help-container .logout-drop li a{
+    padding: 15px 0;
+    margin-right: 20px;
+    display: inline-block;
+    font-weight: 700;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  .update-pass-modal .modal-container{
+    width: 400px;
+  }
+  .update-pass-modal .modal-header{
+    background: #0392CF;
+    padding: 16px 20px;
+  }
+
+  .update-pass-modal .modal-header p {
+    color: #eee;
+    font-weight: 700;
+    font-size: 16px;
+  }
+
+  .update-pass-modal .modal-header .close {
+    text-align: right;
+    width: 50px;
+  }
+
+  .update-pass-modal .modal-header .close a{
+    font-size: 10px;
+    color: #fff;
+  }
+
+  .update-pass-modal .modal-body {
+    padding: 25px 20px;
+  }
+
+  .update-pass-modal .modal-footer {
+    padding: 35px 10px 10px 10px;
+    text-align: right;
+  }
+
+  .update-pass-modal .modal-button{
+    display: inline-block;
+    border: none;
+    line-height: 1;
+    padding: 10px 15px;
+    font-size: 12px;
+    color: rgba(255,255,255,0.87);
+    background-color: #076086;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+    text-transform: uppercase;
+    -webkit-transition-duration: .5s;
+    transition-duration: .5s;
+    -webkit-transition-timing-function: cubic-bezier(.35,0,.25,1);
+    transition-timing-function: cubic-bezier(.35,0,.25,1);
+    -webkit-transition-property: background-color,fill,color;
+    transition-property: background-color,fill,color;
+    font-family: inherit;
+    text-align: center;
+    font-weight: 700;
+    margin: 0 5px;
+  }
+/*-----------------------------*/

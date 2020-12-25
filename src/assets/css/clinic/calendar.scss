@@ -1,0 +1,1083 @@
+.clinic-calendar-wrapper {
+  padding: 90px 0px 50px;
+  background: #fff;
+  min-height: 100vh;
+
+  .calendar-wrapper {
+    /*position: absolute;*/
+    width: 100%;
+    z-index: 1;
+  }
+
+  .calendar-header {
+    background: #fff;
+    padding: 15px 45px;
+    display: flex;
+
+    .header-dropdown-list {
+      position: absolute;
+      top: 30px;
+      background: #fff;
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+      border-radius: 4px;
+      padding: 5px 0;
+      min-width: 160px;
+      z-index: 1;
+    }
+
+    .header-dropdown-list a {
+      display: block;
+      padding: 3px 20px;
+      color: #333;
+    }
+  }
+
+  .view-tabs-doctors-container {
+    margin-bottom: 20px;
+    background: #f1f5f9;
+    /*overflow: hidden;*/
+
+    ul {
+      border-bottom: 1px solid #ddd;
+      height: 44px;
+    }
+
+    li:nth-child(1) {
+      padding: 0 0 0 70px;
+    }
+
+    li {
+      float: left;
+      margin: 0 0 -1px;
+    }
+
+    li a {
+      border: 1px solid #ddd;
+      border-top: transparent;
+      border-bottom: transparent;
+      cursor: pointer;
+      display: block;
+      padding: 10px 15px;
+      line-height: 1.42857143;
+    }
+
+    li a.active {
+      background-color: #fff;
+    }
+  }
+
+  .calendar-header {
+    border-bottom: 1px solid #ddd;
+  }
+
+  .calendar-header > div {
+    display: flex;
+    align-items: center;
+  }
+
+  .header-list {
+    width: 40%;
+
+    > div {
+      margin: 0 20px 0 0;
+      position: relative;
+    }
+
+    > div > div {
+      display: flex;
+      align-items: center;
+    }
+
+    i {
+      margin: 0 0 0 5px;
+    }
+  }
+
+  .dr-container img {
+    margin: 0 5px 0 0;
+  }
+
+  .dr-container, .cal-view 
+  , .settings-icon {
+    cursor: pointer;
+  }
+
+  .calendar-view {
+    width: 28%;
+  }
+
+  .vDatepicker.btn-date {
+    border: 0;
+    min-width: 149px !important;
+    opacity: 0;
+  }
+  .datepicker-btn {
+    display: flex;
+    position: relative;
+
+    .custom.btn-date {
+      min-width: 175px;
+      position: absolute;
+      text-align: center;
+      background: #fff;
+      border: 1px solid #ccc;
+      line-height: 1.42857143;
+      padding: 6px 12px;
+    }
+  }
+
+  
+
+  .calendar-view button {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15), 0 1px 1px rgba(0, 0, 0, 0.075);
+    line-height: 1.42857143;
+    padding: 6px 12px;
+
+    &.btn-today {
+      margin: 0 5px 0 0;
+    }
+    &.btn-date {
+      border-radius: 0px;
+    }
+    &.btn-left {
+      border-radius: 4px 0 0 4px;
+      border-right: 0;
+    }
+    &.btn-right {
+      border-radius: 0 4px 4px 0;
+      border-left: 0;
+    }
+  }
+
+  .header-legend {
+    width: 30%;
+
+    > div {
+      margin: 0 30px 0 0;
+    }
+
+    .fa-circle {
+      width: 15px;
+      text-align: center;
+      margin: 0 5px 0 0;
+    }
+
+    .blue .fa-circle {
+      color: #33b5e5;
+      background: #c5edff;
+    }
+
+    .green .fa-circle {
+      color: #00c851;
+      background: #cbffc5;
+    }
+
+    .yellow .fa-circle {
+      color: #ffbb33;
+      background: #fef6c5;
+    }
+  }
+
+  .header-tool {
+    > div:first-child {
+      margin: 0 5px 0 0;
+      position: relative;
+    }
+
+    .header-dropdown-list {
+      right: 0;
+      width: 170px;
+    }
+
+    .header-dropdown-list .divider {
+      display: block;
+      height: 1px;
+      margin: 9px 0;
+      background-color: #e5e5e5;
+    }
+  }
+
+  .header-tool .provider-selector {
+    font-size: 13px;
+
+    a {
+      display: flex;
+      align-items: center;
+    }
+
+    input {
+      margin: 0 5px 0 0;
+    }
+  }
+
+  .fc-unthemed {
+    padding: 0 0 0 30px;
+    z-index: 0;
+    position: relative;
+  }
+}
+
+.appointment-modal {
+  .modal-clinic-container {
+    width: 600px;
+    height: auto;
+    margin: 30px auto;
+    border-radius: 4px;
+    top: 30px;
+  }
+
+  .modal-header {
+    background-color: #114158;
+    border-radius: 4px 4px 0 0;
+    color: #fff;
+    padding: 20px 15px;
+
+    h4,
+    i {
+      margin: 0;
+    }
+  }
+
+  .appointment-body-container ul {
+    background-color: rgb(111, 201, 245);
+    overflow: auto;
+    padding: 5px 30px;
+
+    li {
+      float: left;
+    }
+
+    a {
+      color: #333;
+      display: block;
+      padding: 10px 15px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+  }
+
+  .modal-body {
+    padding: 0;
+
+    form {
+      height: auto;
+      font-size: 12px;
+      padding: 15px 45px;
+      overflow: inherit;
+    }
+
+    .btn-continue,
+    .btn-reserve {
+      background: #6fc9f5;
+      font-size: 12px;
+      font-weight: 700;
+      box-shadow: none;
+      padding: 10px 12px;
+      margin: 20px 0 0 0;
+    }
+
+    .appoint-back-btn {
+      margin: 0px 10px 0 0; 
+    }
+  }
+}
+
+.modal-calendar-row-input-container {
+  display: flex;
+  align-items: center;
+
+  > label {
+    width: 25%;
+  }
+
+  > label span {
+    font-size: 10px;
+  }
+
+  > div {
+    width: 75%;
+  }
+
+  .modal-calendar-input-container {
+    font-weight: 700;
+  }
+
+  .area-code-container .modal-calendar-input-container {
+    border: 0;
+    height: auto;
+  }
+
+  &.error-message span {
+    display: block;
+    color: #ff0000;
+    line-height: 1.5;
+  }
+
+  input::placeholder {
+    font-size: 12px;
+  }
+}
+
+.modal-clinic-container .area-code-container {
+  display: flex;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+
+  button {
+    font-size: 12px;
+    background: #f4f4f4;
+    box-shadow: none;
+    color: #444340;
+    border-right: 1px solid #d9d9d9;
+    border-radius: 4px 0 0 4px;
+  }
+}
+
+.modal-calendar-input-wrapper {
+  margin: 0 0 10px;
+  position: relative;
+
+  .vue-tel-input {
+    width: 100%;
+    border-radius: unset !important;
+    display: flex;
+    border: unset !important;
+    text-align: left;
+}
+
+  ul.dropdown-container {
+    position: absolute;
+    top: 38px;
+    background-color: #fff;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+    z-index: 1;
+    padding: 0px;
+    width: 100%;
+    max-height: 130px;
+
+    li {
+      width: 100%;
+
+      .right {
+        float: right;
+      }
+
+      :hover {
+        cursor: pointer;
+        background: #1997d4;
+        color: white !important;
+      }
+    }
+
+    &.service-dropdown-container li:nth-child(3) {
+      border-top: 1px solid #e5e5e5;
+    }
+  }
+
+  .dropdown-container a {
+    display: block;
+    font-size: 14px;
+    padding: 3px 20px;
+  }
+
+  .dropdown-container img {
+    margin: 0 5px 0 0;
+  }
+
+  .modal-calendar-input-container {
+    border: 1px solid #d9d9d9;
+    border-radius: 5px;
+    padding: 0 10px;
+    height: 38px;
+    /*width: 355px;*/
+    width: 100%;
+    line-height: 35px;
+    color: #686868;
+    // cursor: pointer;
+  }
+
+  .service-wrapper, .doctor-wrapper, 
+  .time-wrapper, .duration-wrapper {
+    .service-icon, .doctor-icon, .icon {
+      position: absolute;
+      top: 14px;
+    }
+
+    .fa-arrow-right, .fa-check {
+      left: 8px;
+    }
+    .fa-chevron-down {
+      right: 11px;
+      top: 1px;
+    }
+  }
+  .service, .doctor {
+    padding: 0 25px;
+  }
+
+  .fa-check {
+    color: #1b9bd7;
+    margin: 0 5px 0 0;
+  }
+
+  .fa-arrow-right {
+    margin: 0 5px 0 0;
+  }
+
+  .fa-chevron-down {
+    float: right;
+    line-height: 3;
+  }
+}
+
+.duration-form-container,
+.reserve-booking-form-container {
+  .modal-calendar-row-input-container .modal-calendar-input-wrapper {
+    display: flex;
+
+    .duration-container {
+      width: 50%;
+      margin: 0 5px 0 0;
+    }
+
+    .mins-container {
+      width: 50%;
+      margin: 0 0 0 5px;
+    }
+  }
+}
+
+.day-time-container {
+  display: flex;
+
+  > div:nth-child(1) {
+    width: 75%;
+
+    label {
+      width: 33.5%;
+    }
+    .modal-calendar-input-wrapper {
+      width: 210px;
+    }
+  }
+
+  > div:nth-child(2) {
+    width: 25%;
+
+    label {
+      width: 35%;
+    }
+    .modal-calendar-input-wrapper {
+      width: 97px;
+    }
+  }
+}
+
+.clinic-config-modal {
+
+  .modal-clinic-container {
+    width: 550px;
+    height: auto;
+    margin: 0 auto 50px;
+
+    .timepicker-container {
+      position: inherit;
+      width: auto;
+      border: 0;
+    }
+  }
+
+  .modal-header {
+    color: #fff;
+    background-color: #104159;
+    padding: 0;
+    font-size: 14px;
+    height: 51px;
+    overflow: inherit;
+
+    li {
+      text-align: center;
+      width: 108px;
+      height: 51px;
+      float: left;
+      padding: 10px 0 0;
+    }
+
+    a {
+      position: relative;
+    }
+
+    label {
+      display: block;
+    }
+
+    span {
+      display: inline-block;
+    }
+
+    .setup-uncompleted-line {
+      position: absolute;
+      width: 448px;
+      height: 4px;
+      background: rgb(117, 214, 247);
+      margin: 51px 0 0 45px;
+    }
+  }
+
+  .clinic-badge {
+    color: #fff;
+    background-color: #75d6f7;
+    font-weight: 700;
+    border-radius: 50%;
+    width: 23px;
+    height: 23px;
+    vertical-align: middle;
+    line-height: 1.5;
+    font-size: 14px;
+    position: relative;
+    top: 14px;
+    text-align: center;
+
+    &.active {
+      background: rgb(42, 164, 216);
+    }
+
+    .done-step {
+      position: absolute;
+      top: 5px;
+      left: 5px;
+      margin: 0;  
+    }
+  }
+
+  .modal-body {
+    background-color: #bfedf9;
+    padding: 30px;
+  }
+
+  .panel-header,
+  .panel-footer {
+    display: inline-block;
+    width: 100%;
+
+    > div {
+      display: inline-block;
+      font-weight: 700;
+    }
+
+    h3 {
+      font-size: 24px;
+      margin: 15px 0 20px;
+    }
+
+    span {
+      font-size: 12px;
+      color: #777;
+      font-weight: 700;
+    }
+
+    > div:nth-child(2) {
+      float: right;
+      margin: 22px 0 0;
+    }
+
+    button {
+      background-color: #1b9bd7;
+      border-radius: 5px;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 700;
+      height: 35px;
+      width: 75px;
+      padding: 0;
+    }
+
+    .btn-prev {
+      width: 40px;
+      background-color: transparent;
+      border: 1px solid #777;
+      color: #777;
+      margin: 0 5px 0 0;
+      padding: 0 10px;
+    }
+
+    .chevron-right {
+      margin: 0 0 0 3px;
+    }
+  }
+
+  .panel-body {
+    border-radius: 4px;
+    background-color: #fff;
+    margin: 20px 0;
+    padding: 15px;
+
+    > span {
+      color: #1b9bd7;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .time-zone-set-text {
+      margin: 0 0 20px;
+    }
+  }
+
+  .panel-footer {
+    text-align: center;
+    margin: 20px 0 0;
+  }
+
+  .modal-calendar-row-input-container {
+    label {
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .fa-chevron-down {
+      float: inherit;
+      line-height: 0;
+      position: absolute;
+      top: 17px;
+      right: 10px;
+    }
+
+    .modal-calendar-input-wrapper {
+      position: relative;
+    }
+  }
+
+  .second-step {
+    .panel-body > span {
+      font-size: 12px;
+      color: #777;
+      text-align: center;
+      display: block;
+      font-weight: 700;
+    }
+  }
+
+  .third-step img {
+    width: 40px;
+  }
+
+  .add-doctors-info-container {
+    height: 250px;
+    overflow-y: auto;
+  }
+
+  .add-doctors-list {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #999999;
+
+    > div:nth-child(1) {
+      width: 10%;
+    }
+    > div:nth-child(2) {
+      width: 40%;
+    }
+    > div:nth-child(3) {
+      width: 50%;
+    }
+  }
+
+  .panel-body > div.add-doctors-input-container {
+    border-top: 1px solid rgb(216, 216, 216);
+    padding: 20px 0 0;
+  }
+
+  .add-doctors-input-container {
+    display: flex;
+    align-items: center;
+
+    > div:nth-child(1) {
+      width: 10%;
+    }
+    > div:nth-child(2) {
+      display: flex;
+    }
+
+    .modal-calendar-input-wrapper {
+      margin: 0 10px 0 0;
+    }
+  }
+
+  .add-doctors-input-container .btn-add,
+  .service-input-container .btn-add {
+    background-color: #1b9bd7;
+    color: #fff;
+    height: 38px;
+    width: 55px;
+    padding: 0;
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+  .service-info-container > div {
+    display: flex;
+    font-size: 12px;
+    font-weight: 700;
+
+    > div:nth-child(1) {
+      width: 40%;
+    }
+    > div:nth-child(2) {
+      width: 20%;
+    }
+    > div:nth-child(3) {
+      width: 20%;
+    }
+    > div:nth-child(4) {
+      width: 10%;
+    }
+    > div:nth-child(5) {
+      width: 10%;
+      text-align: center;
+      font-size: 14px;
+    }
+  }
+
+  .service-header {
+    color: #999999;
+    margin: 0 0 10px;
+  }
+
+  .service-info-list {
+    height: 185px;
+    overflow-x: auto;
+    color: #666666;
+
+    .fa-user-md {
+      font-size: 14px;
+      margin: 0 5px 0 0;
+    }
+  }
+
+  .service-input-container {
+    > div {
+      display: flex;
+    }
+
+    .time-container {
+      display: flex;
+    }
+
+    .btn-mins,
+    .btn-select-doctor {
+      height: 38px;
+      width: 50px;
+      font-size: 14px;
+      background: #ececec;
+      border: 1px solid #999999;
+      color: #333;
+      padding: 0;
+    }
+
+    .btn-select-doctor .fa-user-md {
+      margin: 0 5px 0 0;
+    }
+  }
+
+  .service-input-container {
+    border-top: 1px solid rgb(216, 216, 216);
+    padding: 20px 0 0;
+
+    >div >div:nth-child(1) {
+      width: 35%;
+    }
+
+    .time-container {
+      width: 25%;
+      padding: 0 10px;
+    }
+
+    .time-container >div:nth-child(1) {
+      padding: 0 3px 0 0;
+    }
+
+    >div >div:nth-child(3) {
+      width: 15%;
+    }
+
+    >div >div:nth-child(4) {
+      width: 13%;
+      padding: 0 0 0 10px;
+    }
+
+    >div >div:nth-child(5) {
+      width: 14%;
+      padding: 0 0 0 10px;
+    }
+  }
+
+  .select-doctor-container {
+    position: relative;
+
+    .dropdown-container {
+      position: absolute;
+      top: 38px;
+      right: 0;
+      background-color: #fff;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+      border: 1px solid #d9d9d9;
+      border-radius: 4px;
+      z-index: 1;
+      width: 230px;
+      max-height: 130px;
+    }
+
+    li {
+      padding: 3px 20px;
+      font-weight: 700;
+    }
+
+    li:nth-child(1) {
+      border-bottom: 1px solid #e5e5e5;
+      padding: 3px 20px 5px;
+    }
+
+    .doctor-list-container {
+      display: flex;
+      align-items: center;
+    }
+
+    .doctor-list-container input {
+      margin: 0 10px 0 0;
+    }
+  }
+
+  .setup-dashboard {
+  
+    >div:first-child {
+      display: flex;
+    }
+
+    >div:first-child >div, h1 {
+      width: 50%;
+    }
+
+    h1 {
+      font-size: 30px;
+      color: #1B9BD7;
+      font-weight: 700;
+      line-height: 1;
+      padding-top: 20px;
+    }
+  }
+
+  .setup-dashboard-link {
+    border: solid 3px #BFEDF9;
+    padding: 30px 0;
+    text-align: center;
+    background-color: #fff;
+
+
+    .features-img-container {
+      height: 90px;
+    }
+
+    span {
+      color: #777;
+      display: block;
+      font-size: 15px;
+      font-weight: 700;
+    }
+  }
+
+  .setup-features-list {
+    >div {
+      display: flex;
+    }
+
+    .setup-dashboard-link {
+      width: 50%;
+    }
+  }
+
+  .modal-footer {
+    display: none;
+  }
+}
+
+.search-panel {
+  padding: 30px 10px 0;
+
+  .fa-search {
+    position: absolute;
+    top: 12px;
+    right: 40px;
+  }
+
+  .modal-calendar-input-wrapper {
+    padding: 0px 30px 30px;
+    border-bottom: 1px solid #C1C0C0;
+  }
+
+  input::placeholder {
+    font-size: 12px;
+  }
+}
+
+.search-panel {
+  .btn-continue {
+    display: block;
+    margin: 20px auto 0px !important;
+  }
+}
+
+.new-customer {
+  padding: 15px 70px;
+
+  .modal-calendar-row-input-container {
+    margin: 0 0 20px;
+  }
+
+  img {
+    width: 50px;
+  }
+
+  .modal-calendar-input-wrapper {
+    margin: 0;
+  }
+
+  .city-state-zip-container {
+    display: flex;
+
+    .modal-calendar-row-input-container {
+      margin: 0;
+    }
+
+    .modal-calendar-row-input-container >div {
+      width: 100%;
+    }
+
+    >div:nth-child(1) {
+      width: 40%;
+    }
+
+    >div:nth-child(2) {
+      width: 35%;
+      padding: 0 10px;
+    }
+
+    >div:nth-child(3) {
+      width: 25%;
+    }
+  }
+}
+
+.check-save {
+  padding: 30px 15px 15px;
+
+  h4 {
+    font-size: 20px;
+    border-bottom: 1px solid #bbb;
+    margin: 0 0 30px;
+    padding: 0 0 20px;
+    text-align: center;
+  }
+
+  .confirm-info-wrapper {
+    width: 480px;
+    margin: 0 auto;
+  }
+
+  .confirm-appointment-container {
+    display: flex;
+
+
+    >div {
+      width: 50%;
+      height: 70px;
+      margin: 0 0 20px;
+    }
+
+    label {
+      display: block;
+      color: #999;
+    }
+
+    span {
+      display: block;
+      font-size: 12px;
+    }
+  }
+
+  .confirm-appointment-btn-container {
+    text-align: center;
+  }
+}
+
+.appointment-details-modal {
+
+  .modal-clinic-container {
+    height: auto;
+    width: 400px;
+    margin: 0 auto;
+
+    .modal-header {
+      padding: 10px 15px;
+      position: relative;
+    }
+
+    .modal-header .fa-times {
+      position: absolute;
+      top: 8px;
+      right: 15px;
+    }
+
+    .modal-body {
+      padding: 15px 30px;
+      border-top: 1px solid #DDDDDD;
+      border-bottom: 1px solid #DDDDDD;
+    }
+
+    .modal-footer {
+      padding: 10px 0;
+      text-align: center;
+    }
+  }
+
+  .appointment-date-time {
+    font-weight: 700;
+    margin: 0 0 20px;
+  }
+
+  .appointment-details-row {
+    color: #777;
+    margin: 0 0 10px;
+    font-weight: 700;
+
+    label {
+      display: inline-block;
+      width: 30%;
+    }
+  }
+
+  .appointment-btn-footer button {
+    background-color: #1B9BD7;
+    color: #fff;
+    padding: 5px 10px;
+    border: 0;
+    font-weight: 700;
+    margin: 0 5px;
+
+    &.btn-delete {
+      background-color: #fff;
+      border: 1px solid #BFB6B6;
+      color: #333;
+      letter-spacing: 1.5;
+    }
+  }
+}
+
+
+
+

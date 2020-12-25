@@ -1,0 +1,354 @@
+.overview-body-container {
+	padding-top: 180px;
+  padding-bottom: 50px;
+  background-color: #f5f5f5;
+
+  .hrdb-body-box {
+  	margin: 0 70px;
+  	display: grid;
+  	grid-template-columns: 66.5% 33%;
+		grid-template-rows: 250px;
+
+    .column-2 {
+      grid-row: span 2;
+      grid-column: 2;
+      padding: 0 15px;
+    }
+
+    .row-3 {
+      grid-row: 2;
+      grid-column: 1;
+    }
+  }
+  .mednefits-blue-box, 
+  .row-3 {
+		width: 100%;
+    margin: 0 auto;
+  }
+  .mednefits-blue-box {
+  	background-color: #15628d;
+  	text-align: center;
+  	color: #fff;
+    grid-row: 1;
+    grid-column: 1;
+  }
+  .mednefits-body-box {
+  	padding: 15px;
+  	img {
+  		height: 50px;
+  	}
+  	h2 {
+  		font-size: 30px;
+  		font-weight: bold;
+  		margin-top: 18px;
+  	}
+  	h5 {
+  		width: 450px;
+	    margin: 15px 0 20px;
+	    margin-left: auto;
+	    margin-right: auto;
+	    line-height: 1.5;
+	    letter-spacing: 1px;
+  	}
+  	h5 strong {
+  		font-weight: 600;
+  	}
+  	button {
+  		color: #fff;
+  		text-transform: none;
+  		background-color: #0392cf;
+	    border: 0;
+	    padding: 8px 30px;
+	    font-weight: 700;
+	    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 
+	    						0 1px 5px 0 rgba(0,0,0,.12), 
+	    						0 3px 1px -2px rgba(0,0,0,.2);
+  	}
+  }
+  .task-box-title h4,
+  .billing-status-title h4 {
+  	font-size: 15px;
+    font-weight: bold;
+    color: #585858;
+    margin: 10px 0;
+    line-height: 1.1
+  }
+  .task-box {
+  	padding: 0 15px;
+
+  	.task-box-details {
+	    padding: 15px;
+    	border-left: solid 5px #33a2d4;
+  	}
+  	.task-info {
+  		margin: 0;
+	    color: #676767;
+	    font-weight: 700;
+	    font-size: 13px;
+	    line-height: 1.1;
+
+	    a {
+	    	background-color: transparent;
+    		color: #039be5;
+	    }
+  	}
+  }
+  .billing-status-box-container {
+  	padding: 0 15px;
+  	line-height: 1.1;
+
+  	.billing-status-box {
+	    padding: 20px;
+	    display: grid;
+	    grid-template-columns: 1fr 2fr 1fr;
+	    font-weight: 600;
+	    font-size: 12px;
+  	}
+  	.plan-subscription-container {
+	    border-right: 2px solid #d6d6d6;
+	    color: #585858;
+		}
+		.health-spending-accounts-container {
+	    padding-left: 25px; 
+	  }
+		h5 {
+			margin-bottom: 10px;
+		}
+		.subscription-current-balance {
+			margin-bottom: 10px;
+		}
+		.subscription-price {
+	    color: #33cccc;
+	    font-size: 18px;
+		}
+		.subscription-date {
+		  color: #b5b5b5;
+		  margin: 10px 0;
+		  font-weight: 400;
+		}
+		.view-invoice-button {
+			text-align: right;
+		}
+		.view-invoice-button button {
+			background-color: #0392cf;
+	    color: #fff;
+	    border: 0;
+	    border-radius: 4px;
+	    padding: 10px 18px;
+		}
+  }
+  .company-credits-container {
+  	background-color: #fff;
+    height: auto;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    font-weight: 700;
+
+    .home-spending-type-container {
+    	display: inline-block;
+    	width: 100%;
+    	padding: 20px 30px 10px;
+    	font-size: 16px;
+
+    	p {
+    		color: #333;
+    		margin-bottom: 10px;
+    	} 
+    }
+    .credit-box {
+    	padding: 15px 15px 15px 30px;
+    	font-weight: 700;
+    }
+    .credit-allocated-container,
+    .credit-spent-container {
+    	h1 {
+	    font-size: 20px;
+	    color: #0392cf;
+	    }
+	    .credit-text {
+	    	display: block;
+	    	font-size: 12px;
+		    color: #666;
+	    }	
+    }
+    .credit-spent-container {
+    	margin-top: 20px;
+    }
+  }
+  .employee-enrollment-box,
+  .dependent-enrollment-box {
+  	line-height: 1.1;
+  	margin-bottom: 20px;
+  	font-weight: 700;
+
+  	.mednefits-body-box {
+  		padding-left: 30px;
+  	}
+  }
+  .enrollment-status-number {
+    font-size: 16px;
+    color: #0392cf;
+    margin-top: 0;
+    margin-bottom: 5px;
+	}
+	.enrollment-status-text {
+    font-size: 12px;
+    color: #666;
+    margin-top: 0;
+    text-transform: uppercase;
+    margin-bottom: 10px
+	}	 
+}
+
+/* Medical Wellness Button */
+.btn-spending-type {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #333;
+  background-color: #fff;
+  border: 1px solid #adadad;
+  letter-spacing: .5px;
+  line-height: 1.4;
+  font-weight: 700;
+
+  &.btn-medical {
+    border-radius: 4px 0 0 4px;
+    border-width: 2px 1px 2px 2px;
+  }
+  &.btn-wellness {
+    border-radius: 0 4px 4px 0;
+    border-width: 2px 2px 2px 1px;
+  }
+  &.active,
+  &:hover,
+  &:focus {
+    border-color: #009EC8;
+    background: #FFF;
+  }
+}
+
+//  responsive styles
+
+@media (max-width: 1173px) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1081px){
+	.overview-body-container {
+		.hrdb-body-box {
+			margin: 0;
+		}
+	}
+}
+
+@media (max-width: 941px){
+	.btn-spending-type {
+		width: 100%;
+		margin-bottom: 10px;
+	}
+
+	.btn-spending-type.btn-wellness, .btn-spending-type.btn-medical {
+    border-radius: 4px;
+    border-width: 2px;
+	}
+
+}
+
+@media (max-width: 767px){
+	.overview-body-container {
+		padding-top: 100px;
+
+		.mednefits-body-box h5 {
+			width: 100%;
+		}
+
+		.mednefits-blue-box, .overview-body-container .row-3 {
+			width: 100%;
+			margin: 0 auto;
+		}
+
+		.hrdb-body-box {
+			grid-template-columns: 100%;
+
+			.column-2  {
+				padding: 15px 15px;
+				grid-row: 2;
+				grid-column: 1;
+
+				display: grid;
+				grid-template-columns: 1fr 1fr 1fr;
+				
+				.mednefits-box {
+					margin: 0 5px;
+				}
+			}
+
+			.row-3 {
+				grid-row: 3;
+				grid-column: 1;
+			}
+		}
+	}
+}
+
+@media ( max-width: 630px) {
+	.overview-body-container  {
+    .billing-status-box-container { 
+			.billing-status-box {
+				grid-template-columns: 1fr 1fr;
+			}
+			.view-invoice-button {
+				text-align: center;
+				grid-column: span 2;
+				margin: 20px auto 0;
+
+				button {
+					padding: 10px 60px;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 605px){
+	.overview-body-container {
+
+		.hrdb-body-box {
+			.column-2  {
+				padding: 0 15px;
+				display: unset;
+				.mednefits-box {
+					margin: 15px 0;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 371px){
+	.overview-body-container {
+
+		.billing-status-box-container {
+			.billing-status-box {
+    		grid-template-columns: 1fr;
+			}
+			.plan-subscription-container {
+				border-right: unset;
+				color: unset;
+			}
+			.health-spending-accounts-container {
+				padding: 15px 0;
+			}
+
+			.view-invoice-button {
+				grid-column: unset;
+				margin: 0 auto;
+			}
+		}
+	}
+}
+
+
+

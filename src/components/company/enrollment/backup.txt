@@ -1,0 +1,123 @@
+//used in web input
+      let arrStorage = this.employeeStorage;
+      let limit = arrStorage.length;
+      if (data == "add") {
+        //if add button click
+        // this.dependentState = !this.dependentState;
+        // if (this.dependentState === false) {
+        //   this.isState = "web";
+        // }
+        // store to temp storage when adding employees
+        if( this.checkDependentForm( this.dependentDetails ) == false ){
+          return false;
+        }
+        this.dependentStorage.push({
+          first_name: this.dependentDetails.fname,
+          last_name: this.dependentDetails.lname,
+          relationship: this.dependentDetails.relation,
+          nric: this.dependentDetails.nricFinNo,
+          dob: this.dependentDetails.dob,
+          plan_start: this.dependentDetails.startDate
+        });
+        this.dependentDetails = {};
+        // this.dependentDetails.dob = undefined;
+        // this.dependentDetails.startDate = undefined;
+        this.$refs.formDep.reset();
+      } else if (data == "save") {
+        //else Save and Continue click
+        if( this.dependentStorage.length == 0 ){
+          if( this.checkDependentForm( this.dependentDetails ) == false ){
+            return false;
+          }
+        }
+        if (this.isEmpty(this.dependentDetails) == true) {
+          if (this.indexData != limit || limit != 0) {
+            arrStorage[this.indexData].dependents = this.dependentStorage;
+            this.dependentStorage = [];
+            this.dependentDetails = {};
+          } else {
+            if( this.checkDependentForm( this.dependentDetails ) == false ){
+              return false;
+            }
+          }
+        } else {
+          if (this.indexData == limit || limit == 0) {
+            if( this.dependentDetails.fname || this.dependentDetails.lname ){
+              if( this.checkDependentForm( this.dependentDetails ) == false ){
+                return false;
+              }
+            }
+            if( this.isTiering ){
+              this.tierDependentCountIndex += 1;
+            }else{
+              this.dependentCountIndex += 1;
+            }
+            this.dependentStorage.push({
+              first_name: this.dependentDetails.fname,
+              last_name: this.dependentDetails.lname,
+              relationship: this.dependentDetails.relation,
+              nric: this.dependentDetails.nricFinNo,
+              dob: this.dependentDetails.dob,
+              plan_start: this.dependentDetails.startDate
+            });
+            this.dependentDetails = {};
+            this.dependentState = false;
+          } else if ( this.dependentStorage.length != 0 && this.isEmpty(this.dependentDetails) == false ) {
+            arrStorage[this.indexData].dependents = this.dependentStorage;
+
+            console.log("save both to existing employee");
+            if( this.dependentDetails.fname || this.dependentDetails.lname ){
+              if( this.checkDependentForm( this.dependentDetails ) == false ){
+                return false;
+              }
+            }
+            if( this.isTiering ){
+              this.tierDependentCountIndex += 1;
+            }else{
+              this.dependentCountIndex += 1;
+            }
+            arrStorage[this.indexData].dependents.push({
+              first_name: this.dependentDetails.fname,
+              last_name: this.dependentDetails.lname,
+              relationship: this.dependentDetails.relation,
+              nric: this.dependentDetails.nricFinNo,
+              dob: this.dependentDetails.dob,
+              plan_start: this.dependentDetails.startDate
+            });
+            this.dependentStorage = [];
+            this.dependentDetails = {};
+            this.dependentState = false;
+          } else {
+            if( this.dependentDetails.fname || this.dependentDetails.lname ){
+              if( this.checkDependentForm( this.dependentDetails ) == false ){
+                return false;
+              }
+            }
+            if( this.isTiering ){
+              this.tierDependentCountIndex += 1;
+            }else{
+              this.dependentCountIndex += 1;
+            }
+            arrStorage[this.indexData].dependents.push({
+              first_name: this.dependentDetails.fname,
+              last_name: this.dependentDetails.lname,
+              relationship: this.dependentDetails.relation,
+              nric: this.dependentDetails.nricFinNo,
+              dob: this.dependentDetails.dob,
+              plan_start: this.dependentDetails.startDate
+            });
+            this.dependentDetails = {};
+            this.dependentState = false;
+          }
+          // store to temp storage when adding employees
+        }     
+
+        this.isState = "web";
+        this.empDepNavState = true;
+        this.depIndexData = 0; // reset back to zero
+        this.depPrevChevronState = false;
+        this.depNextChevronState = false;
+      }
+      // console.log( this.arrStorage[this.indexData] );
+      console.log( this.dependentStorage );
+      return true;
